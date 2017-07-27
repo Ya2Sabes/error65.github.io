@@ -95,6 +95,14 @@ ol, ul {
 blockquote, q {
   quotes: none;
 }
+h2 {
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 250%;
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';

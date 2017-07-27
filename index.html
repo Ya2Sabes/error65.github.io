@@ -9,13 +9,27 @@
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     
-    <title>Is @NeoNacho Still Working At Apple?</title>
+    <title>Error 65?</title>
+    <script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "https://api.github.com/search/issues?q=%22error%2065%22+repo:fastlane/fastlane", true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var queryResponse = JSON.parse(xhr.responseText);
+        // alert(queryResponse.total_count);
+        githubDiv = document.getElementById("github");
+        githubDiv.innerHTML = "<a target=\"_blank\" href=\"https://github.com/fastlane/fastlane/issues?utf8=%E2%9C%93&q=is%3Aissue%20%22error%2065%22\">Current fastlane github issues: " + queryResponse.total_count + "</a>"
+
+      }
+    };
+    xhr.send();
+    </script>
   </head>
   <body>
     <div class="shell">
-      <section id="main_content">
-        <h3>yatusabes</h3>
-      </section>
+        <br/>
+        <h2 id="github"/>
+        <h1> yatusabes </h1>
     </div>
   </body>
 </html>
